@@ -5,10 +5,11 @@ import java.awt.image.BufferedImage;
 
 public class Entity {
 
-	public double x;
-	public double y;
+	protected double x;
+	protected double y;
 	protected int width;
 	protected int height;
+
 	private BufferedImage spriteSheet;
 
 	public Entity(int x, int y, int width, int height, BufferedImage spriteSheet) {
@@ -23,8 +24,16 @@ public class Entity {
 		return (int) this.x;
 	}
 
+	public void SetX(double newX) {
+		this.x = newX;
+	}
+
 	public int GetY() {
 		return (int) this.y;
+	}
+
+	public void SetY(double newY) {
+		this.y = newY;
 	}
 
 	public int GetWidth() {
@@ -35,19 +44,11 @@ public class Entity {
 		return this.height;
 	}
 
-	public void SetX(int newX) {
-		this.x = newX;
-	}
-
-	public void SetY(int newY) {
-		this.y = newY;
-	}
-
-	public void Update() {
+	public void update() {
 
 	}
 
-	public void Render(Graphics g) {
+	public void render(Graphics g) {
 		g.drawImage(spriteSheet, this.GetX(), this.GetY(), null);
 	}
 }
