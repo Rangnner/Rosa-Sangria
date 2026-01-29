@@ -6,8 +6,15 @@ import com.bibocas.main.Game;
 
 public class Tile {
 
-    public static BufferedImage TILE_FLOOR = Game.sprite.GetSprite(80, 0, 16, 16);
-    public static BufferedImage TILE_WALL = Game.sprite.GetSprite(80, 176, 16, 16);
+    public static BufferedImage TILE_GRASS_FLOOR = Game.sprite.GetSprite(0, 0, 16, 16);
+    public static BufferedImage TILE_CRACKED_FLOOR = Game.sprite.GetSprite(16, 0, 16, 16);
+    public static BufferedImage TILE_BTICK_WALL = Game.sprite.GetSprite(32, 0, 16, 16);
+    public static BufferedImage TILE_WATER = Game.sprite.GetSprite(48, 0, 16, 16);
+    public static BufferedImage TILE_FLOOR = Game.sprite.GetSprite(64, 0, 16, 16);
+    public static BufferedImage TILE_SAND_FLOOR = Game.sprite.GetSprite(80, 0, 16, 16);
+    public static BufferedImage TILE_BUSH_CRACKED_FLOOR = Game.sprite.GetSprite(144, 16, 16, 16);
+    public static BufferedImage TILE_DRY_BUSH_CRACKED_FLOOR = Game.sprite.GetSprite(144, 16, 16, 16);
+    public static BufferedImage TILE_CACTUS_CRACKED_FLOOR = Game.sprite.GetSprite(144, 16, 16, 16);
 
     private BufferedImage sprite;
     private int x, y;

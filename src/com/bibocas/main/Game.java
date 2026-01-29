@@ -23,13 +23,12 @@ public class Game extends Canvas implements Runnable, KeyListener {
 	private static final long serialVersionUID = 1L;
 
 	public static JFrame frame;
-
-	public static final int WIDTH = 240;
-	public static final int HEIGHT = 160;
-	public static final int SCALE = 3;
-
 	private Thread thread;
 	private boolean isRunning = true;
+
+	private static final int WIDTH = 320;
+	private static final int HEIGHT = 240;
+	private static final int SCALE = 3;
 
 	private BufferedImage image;
 
@@ -47,9 +46,9 @@ public class Game extends Canvas implements Runnable, KeyListener {
 		image = new BufferedImage(WIDTH, HEIGHT, BufferedImage.TYPE_INT_BGR);
 		entities = new ArrayList<Entity>();
 		sprite = new SpriteSheet("/sprite.png");
-		world = new World("/map1.png");
 		player = new Player(0, 0, 16, 16, sprite.GetSprite(0, 16, 16, 16));
 		entities.add(player);
+		world = new World("/map1.png");
 	}
 
 	public void InitFrame() {
