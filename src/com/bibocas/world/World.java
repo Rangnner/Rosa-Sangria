@@ -29,6 +29,7 @@ public class World {
                         tiles[xx + (yy * WIDTH)] = new WallTile(xx * 16, yy * 16, Tile.TILE_WALL);
                     } else if (pixelAtual == 0xFF0000FF) {
                         // Blue pixel - Player spawn
+                        tiles[xx + (yy * WIDTH)] = new FloorTile(xx * 16, yy * 16, Tile.TILE_FLOOR);
                     } else {
                         // Default to Floor for unknown pixels
                         tiles[xx + (yy * WIDTH)] = new FloorTile(xx * 16, yy * 16, Tile.TILE_FLOOR);
