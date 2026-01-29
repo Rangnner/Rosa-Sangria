@@ -16,6 +16,7 @@ import javax.swing.JFrame;
 import com.bibocas.entities.Entity;
 import com.bibocas.entities.Player;
 import com.bibocas.graphics.SpriteSheet;
+import com.bibocas.world.World;
 
 public class Game extends Canvas implements Runnable, KeyListener {
 
@@ -36,15 +37,17 @@ public class Game extends Canvas implements Runnable, KeyListener {
 
 	public static SpriteSheet sprite;
 
+	public static World world;;
+
 	public static Player player;
 
 	public Game() {
 		this.setPreferredSize(new Dimension(WIDTH * SCALE, HEIGHT * SCALE));
 		InitFrame();
-
 		image = new BufferedImage(WIDTH, HEIGHT, BufferedImage.TYPE_INT_BGR);
 		entities = new ArrayList<Entity>();
 		sprite = new SpriteSheet("/sprite.png");
+		world = new World("/map1.png");
 		player = new Player(0, 0, 16, 16, sprite.GetSprite(0, 16, 16, 16));
 		entities.add(player);
 	}
