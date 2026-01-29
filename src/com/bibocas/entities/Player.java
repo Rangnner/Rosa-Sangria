@@ -75,13 +75,13 @@ public class Player extends Entity {
 
 	public void render(Graphics g) {
 		if (dir == rightDir) {
-			g.drawImage(rightPlayer[index], this.GetX(), this.GetY(), null);
+			g.drawImage(rightPlayer[index], this.getX(), this.getY(), null);
 		} else if (dir == leftDir) {
-			g.drawImage(leftPlayer[index], this.GetX(), this.GetY(), null);
+			g.drawImage(leftPlayer[index], this.getX(), this.getY(), null);
 		} else if (dir == upDir) {
-			g.drawImage(upPlayer[index], this.GetX(), this.GetY(), null);
+			g.drawImage(upPlayer[index], this.getX(), this.getY(), null);
 		} else if (dir == downDir) {
-			g.drawImage(downPlayer[index], this.GetX(), this.GetY(), null);
+			g.drawImage(downPlayer[index], this.getX(), this.getY(), null);
 		}
 	}
 
