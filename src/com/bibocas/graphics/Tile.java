@@ -8,7 +8,7 @@ public class Tile {
 
     public static BufferedImage TILE_GRASS_FLOOR = Game.sprite.GetSprite(0, 0, 16, 16);
     public static BufferedImage TILE_CRACKED_FLOOR = Game.sprite.GetSprite(16, 0, 16, 16);
-    public static BufferedImage TILE_BTICK_WALL = Game.sprite.GetSprite(32, 0, 16, 16);
+    public static BufferedImage TILE_BRICK_WALL = Game.sprite.GetSprite(32, 0, 16, 16);
     public static BufferedImage TILE_WATER = Game.sprite.GetSprite(48, 0, 16, 16);
     public static BufferedImage TILE_FLOOR = Game.sprite.GetSprite(64, 0, 16, 16);
     public static BufferedImage TILE_SAND_FLOOR = Game.sprite.GetSprite(80, 0, 16, 16);
