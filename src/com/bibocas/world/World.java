@@ -6,7 +6,6 @@ import javax.imageio.ImageIO;
 
 import com.bibocas.entities.Entity;
 import com.bibocas.entities.BulletPack;
-import com.bibocas.entities.Macaco;
 import com.bibocas.entities.Garrucha;
 import com.bibocas.entities.LifePack;
 import com.bibocas.graphics.Tile;
