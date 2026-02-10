@@ -28,30 +28,27 @@ public class World {
             for (int xx = 0; xx < map.getWidth(); xx++) {
                 for (int yy = 0; yy < map.getHeight(); yy++) {
                     int pixelAtual = pixels[xx + (yy * map.getWidth())];
-                    tiles[xx + (yy * WIDTH)] = new FloorTile(xx * 16, yy * 16,
-                            Tile.TILE_GRASS_FLOOR);
-                    if (pixelAtual == 0x958063) {
-                        tiles[xx + (yy * WIDTH)] = new FloorTile(xx * 16, yy * 16,
-                                Tile.TILE_CRACKED_FLOOR);
-                    } else if (pixelAtual == 0x958063) {
-                        tiles[xx + (yy * WIDTH)] = new FloorTile(xx * 16, yy * 16, Tile.TILE_CRACKED_FLOOR);
-                    } else if (pixelAtual == 0x92e1c2) {
+                    tiles[xx + (yy * WIDTH)] = new FloorTile(xx * 16, yy * 16, Tile.TILE_GRASS_FLOOR);
+                    if (pixelAtual == 0xffcd5c5c) {
+                        tiles[xx + (yy * WIDTH)] = new FloorTile(xx * 16, yy * 16, Tile.TILE_FLOOR);
+                    } else if (pixelAtual == 0xff92e1c2) {
+                        tiles[xx + (yy * WIDTH)] = new WallTile(xx * 16, yy * 16, Tile.TILE_BRICK_WALL);
+                    } else if (pixelAtual == 0xffc0c0c0) {
+                        // player
                         Game.player.setX(xx * 16);
                         Game.player.setY(yy * 16);
-                    } else if (pixelAtual == 0x92e1c2) {
-                        tiles[xx + (yy * WIDTH)] = new WallTile(xx * 16, yy * 16, Tile.TILE_BRICK_WALL);
-                    } else if (pixelAtual == 0xff7e00) {
-                        Game.entities.add(new BulletPack(xx * 16, yy * 16, 16, 16,
-                                Entity.BULLETPACK_EN));
-                    } else if (pixelAtual == 0x7fb5b5) {
-                        Game.entities.add(new Garrucha(xx * 16, yy * 16, 16, 16,
-                                Entity.GARRUCHA_EN));
-                    } else if (pixelAtual == 0x587156) {
-                        Game.entities.add(new LifePack(xx * 16, yy * 16, 16, 16,
-                                Entity.LIFEPACK_EN));
-                    } else if (pixelAtual == 0xeb6081) {
-                        Game.entities.add(new Enemy(xx * 16, yy * 16, 16, 16,
-                                Entity.ENEMY_EN));
+                    } else if (pixelAtual == 0xff7fb5b5) {
+                        // garrucha
+                        Game.entities.add(new Garrucha(xx * 16, yy * 16, 16, 16, Entity.GARRUCHA_EN));
+                    } else if (pixelAtual == 0xffeb6081) {
+                        // enemy
+                        Game.entities.add(new Enemy(xx * 16, yy * 16, 16, 16, Entity.ENEMY_EN));
+                    } else if (pixelAtual == 0xffff7e00) {
+                        // bulletpack
+                        Game.entities.add(new BulletPack(xx * 16, yy * 16, 16, 16, Entity.BULLETPACK_EN));
+                    } else if (pixelAtual == 0xff587156) {
+                        // life pack
+                        Game.entities.add(new LifePack(xx * 16, yy * 16, 16, 16, Entity.LIFEPACK_EN));
                     }
                 }
             }
