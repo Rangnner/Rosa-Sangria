@@ -10,7 +10,7 @@ public class Entity {
 	public static BufferedImage LIFEPACK_EN = Game.sprite.GetSprite(144, 0, 16, 16);
 	public static BufferedImage BULLETPACK_EN = Game.sprite.GetSprite(128, 0, 16, 16);
 	public static BufferedImage GARRUCHA_EN = Game.sprite.GetSprite(112, 0, 16, 16);
-	public static BufferedImage MACACO_EN = Game.sprite.GetSprite(160, 0, 16, 16);
+	public static BufferedImage ENEMY_EN = Game.sprite.GetSprite(160, 0, 16, 16);
 
 	protected double x;
 	protected double y;
